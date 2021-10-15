@@ -29,6 +29,11 @@ int main(int argc, char **argv) {
         exit(EXIT_FAILURE);
     }
 
+    if (std::string(argv[1]) == "--help" || std::string(argv[1]) == "-h") {
+        printf("IP Resolve\nUSAGE: %s <IP> [IP...]\nie: %s 1.1.1.1\n",argv[0],argv[0]);
+        return 0;
+    }
+
     std::cout << "IP Resolve Results" << std::endl;
 
     char buffer[2048] = {0};
