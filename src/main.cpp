@@ -107,46 +107,4 @@ int main(int argc, char **argv) {
     }
 
     curl_easy_cleanup(hnd);
-
-    // int sock = 0, valread;
-    // struct sockaddr_in server;
-    // if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
-    //     perror("Couldn't create socket");
-    //     return EXIT_FAILURE;
-    // }
-
-    // server.sin_family = AF_INET;
-    // server.sin_port = htons(443);
-
-    // struct hostent *hoste = gethostbyname("ip-api.com");
-
-    // char *host = strdup(inet_ntoa(
-    //         *((struct in_addr*)hoste->h_addr_list[0])));
-
-    // if (inet_pton(AF_INET, host, &server.sin_addr) <=0) {
-    //     perror("Invalid address");
-    //     return EXIT_FAILURE;
-    // }
-
-    // for (int i = 1; i < argc; i++) {
-    //     if (connect(sock, (struct sockaddr *)&server, sizeof(server)) < 0) {
-    //         perror("Conenction failed");
-    //         return EXIT_FAILURE;
-    //     }
-
-    //     sprintf(buffer, "GET /json/%s?fields=18601979 HTTP/1.1\nHost: ip-api.com\nConnection: keep-alive\n\n", argv[i]);
-    //     printf("> %s\n", buffer);
-    //     send(sock, buffer, strlen(buffer), 0);
-    //     memset(buffer, 0, 2048);
-
-    //     int bytesRead;
-
-    //     while ((bytesRead = recv(sock, buffer, 2048, 0)) != 0) {
-    //         buffer[bytesRead] = '\0';
-    //     }
-
-    //     printf("< %s\n", buffer);
-
-    //     return 0;
-    // }
 }
